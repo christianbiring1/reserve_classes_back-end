@@ -1,16 +1,15 @@
-class ReservationsController < ApplicationController
-  # include CurrentUserConcern
-  def all
-    if @current_user
+class ReservationsController < ApplicationController  
+  def index
+    reservations = Reservation.all
+    if reservations
       render json: {
-
         status: 200,
-        res: "his is tthe list of all reservaions",
-        user: @current_user
+        data: reservations
       }
     else
-      render json: { status: 401,
-                     res: "you need to login in order to see you reservations" }
+      render json: { 
+        status: 404,
+        res: "The reservation list is now empty" }
     end
   end
 
@@ -25,7 +24,7 @@ class ReservationsController < ApplicationController
       render json: {
 
         status: 404,
-        res: "Try again, some tthing went wrong",
+        res: "Try again, some thing went wrong",
       }
     end
   end
