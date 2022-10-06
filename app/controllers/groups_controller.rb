@@ -17,4 +17,10 @@ class GroupsController < ApplicationController
       render json: group.errors.full_messages, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    group = Group.find(params[:id])
+    group.destroy
+    render json: 'The class has been deleted successfully!'
+  end
 end
