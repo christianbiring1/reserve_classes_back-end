@@ -1,9 +1,6 @@
 require 'json'
 
 class GroupsController < ApplicationController
-
-
-
   before_action :set_group, only: %i[show destroy]
   before_action :group_params, only: %i[create]
 
@@ -18,17 +15,16 @@ class GroupsController < ApplicationController
   end
 
   def create
-    group = @current_user.groups.new(goup_params)
+    @group = Group.new(group_params)
 
-
-    if group.save
-      render json: group, status: :created, location: group
+    if @group.save
+      render json: @group, status: :created, location: @group
     else
-      render json: group.errors, status: :unprocessable_entity
+      render json: @group.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE 
+  # DELETE
   def destroy
     @group.destroy
     render json: 'Class Deleted Successfully'
@@ -43,8 +39,6 @@ class GroupsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def group_params
-    params.permit(:name,:title, :description, :rating, :image,:user_id, :location)
+    params.permit(:name, :title, :description, :rating, :user_id)
   end
-
- 
 end
