@@ -23,4 +23,10 @@ class GroupsController < ApplicationController
     group.destroy
     render json: 'The class has been deleted successfully!'
   end
+
+  private
+
+  def groups_params
+    params.require(:group).permit(:name, :description, :rating, :title)
+  end
 end
