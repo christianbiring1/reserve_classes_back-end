@@ -27,7 +27,7 @@ class GroupsController < ApplicationController
   # DELETE
   def destroy
     @group.destroy
-    render json: 'Class Deleted Successfully'
+    render json: 'The class has been deleted successfully!'
   end
 
   private
