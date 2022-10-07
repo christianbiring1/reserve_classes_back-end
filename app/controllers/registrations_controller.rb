@@ -1,7 +1,6 @@
 class RegistrationsController < ApplicationController
   def create
     user = User.create!(user_register_params)
-
     if user
       session[:user_id] = user.id
       render json: {
