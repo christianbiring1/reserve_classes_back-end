@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # post :reservations, to: "reservations#new"
   # get :groups, to: "groups#all"
   root to: 'static#home'
+  resources :groups
 
   # Defines the root path route ("/")
   # root "articles#index"
