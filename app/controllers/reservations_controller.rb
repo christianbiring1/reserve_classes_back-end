@@ -1,4 +1,4 @@
-class ReservationsController < ApplicationController  
+class ReservationsController < ApplicationController
   def index
     reservations = Reservation.all
     if reservations
@@ -7,9 +7,10 @@ class ReservationsController < ApplicationController
         data: reservations
       }
     else
-      render json: { 
+      render json: {
         status: 404,
-        res: "The reservation list is now empty" }
+        res: 'The reservation list is now empty'
+      }
     end
   end
 
@@ -18,13 +19,13 @@ class ReservationsController < ApplicationController
     if reservation.save
       render json: {
         status: 200,
-        res: "New Class reserved successful",
+        res: 'New Class reserved successful'
       }
     else
       render json: {
 
         status: 404,
-        res: "Try again, some thing went wrong",
+        res: 'Try again, some thing went wrong'
       }
     end
   end
