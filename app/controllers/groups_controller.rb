@@ -15,6 +15,7 @@ class GroupsController < ApplicationController
   end
 
   def create
+    @current_user = User.find(1)
     @group = @current_user.groups.new(group_params)
 
     if @group.save
