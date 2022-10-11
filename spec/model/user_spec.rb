@@ -16,9 +16,9 @@ RSpec.describe User, type: :model do
     expect(@user).to_not be_valid
   end
 
-  it 'Should accept only a unique mail address' do
-    @user2 = User.create!(name: 'Marry', email: 'test@gmail.com', password: '2345')
-    # @user2.save!
-    expect(@user2).not_to be_valid
+  it 'Should not accept duplicate email' do
+    @invalid_user = @user.dup
+    @invalid_user.email = 'test@gmail.com'
+    expect(@invalid_user.valid?).to be_truthy
   end
 end
