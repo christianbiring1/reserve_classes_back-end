@@ -1,11 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-
   before :each do
     @user = User.create(name: 'Tom', email: 'test@gmail.com', password: '1234')
   end
-  
+
   it 'Should have the image and title attribute' do
     group = Group.create!(image: 'https://unsplash/image.com', title: 'Sport', user_id: @user.id)
     group.image = nil
