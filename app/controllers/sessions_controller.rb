@@ -8,12 +8,12 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       render json: {
-        status: "Logged in successfully!",
+        status: 'Logged in successfully!',
         logged_in: true,
         user:
       }
     else
-      render json: { status: "Incorrect email or password." }
+      render json: { status: 'Incorrect email or password.' }
     end
   end
 
