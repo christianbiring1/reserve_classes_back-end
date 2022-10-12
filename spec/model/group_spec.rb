@@ -6,7 +6,9 @@ RSpec.describe Group, type: :model do
   end
 
   it 'Should have the image and title attribute' do
-    group = Group.create!(image: 'https://unsplash/image.com', title: 'Sport', user_id: @user.id)
+    group = Group.create!(name: 'Yoga', description: 'THis is a Yoga class', rating: 2, title: 'sport',
+                          image: Rack::Test::UploadedFile.new('spec/support/test_image.png', 'image/png'),
+                          user_id: @user.id)
     group.image = nil
     expect(group).to_not be_valid
   end
