@@ -15,9 +15,12 @@ class GroupsController < ApplicationController
   end
 
   def create
+    @current_user = User.find(1)
+
     @group = @current_user.groups.new(group_params)
 
     if @group.save
+
       render json: @group, status: :created, location: @group
     else
       render json: @group.errors, status: :unprocessable_entity
@@ -39,6 +42,6 @@ class GroupsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def group_params
-    params.require(:group).permit(:name, :title, :description, :rating, :user_id)
+    params.permit(:name, :title, :description, :rating, :user_id, :image, :group)
   end
 end
