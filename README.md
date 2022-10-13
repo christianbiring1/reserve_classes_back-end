@@ -64,7 +64,7 @@ if you want to run it locally you will need to change the URL host in the and ch
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/christianbiring1/reserve_classes_front-end/issues).
+Feel free to check the [issues page](https://github.com/christianbiring1/reserve_classes_back-end/issues).
 
 ## Show your support
 
