@@ -15,6 +15,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    puts @current_user
     reservation =  @current_user.Reservation.create!(new_reservation_params)
     if reservation.save
       render json: {
