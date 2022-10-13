@@ -15,7 +15,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    reservation =  Reservation.create(new_reservation_params)
+    reservation = Reservation.create(new_reservation_params)
     if reservation.save
       render json: {
         status: 200,
