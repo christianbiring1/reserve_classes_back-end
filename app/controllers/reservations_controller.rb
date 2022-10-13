@@ -19,7 +19,7 @@ class ReservationsController < ApplicationController
     if reservation.save
       render json: {
         status: 200,
-        res: 'New Class reserved successful'  
+        res: 'New Class reserved successful'
       }
     else
       render json: {
