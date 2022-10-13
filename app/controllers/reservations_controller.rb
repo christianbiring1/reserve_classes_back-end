@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   def index
-    reservations = Reservation.all
+    reservations = @current_user.reservations
     if reservations
       render json: {
         status: 200,

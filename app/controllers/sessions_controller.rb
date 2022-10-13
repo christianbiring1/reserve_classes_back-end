@@ -1,16 +1,16 @@
 class SessionsController < ApplicationController
-  include CurrentUserConcern
+  skip_before_action :authenticate_request, only: [:create, :logout]
 
   def create
     user = User
       .find_by(email: params[:email])
       .try(:authenticate, params[:password])
     if user
-      session[:user_id] = user.id
+      token = jwt_encode(user_id: user.id)
       render json: {
         status: 'Logged in successfully!',
         logged_in: true,
-        user:
+        token:
       }
     else
       render json: { status: 'Incorrect email or password.' }
