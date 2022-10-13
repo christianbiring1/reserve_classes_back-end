@@ -30,6 +30,14 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def destroy
+    if Reservation.find(params[:id]).destroy
+      render json: { message: 'Deleted!' }
+    else
+      render json: { error: 'Unable to delete reservation' }, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def new_reservation_params
