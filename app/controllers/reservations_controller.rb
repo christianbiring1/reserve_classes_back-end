@@ -15,7 +15,7 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    reservation = Reservation.create!(new_reservation_params)
+    reservation =  @current_user.Reservation.create!(new_reservation_params)
     if reservation.save
       render json: {
         status: 200,
@@ -33,6 +33,6 @@ class ReservationsController < ApplicationController
   private
 
   def new_reservation_params
-    params.require(:reservation).permit(:date, :group_id, :user_id, :city)
+    params.require(:reservation).permit(:date, :group_id, :city)
   end
 end
