@@ -19,7 +19,7 @@ class ReservationsController < ApplicationController
     if reservation.save
       render json: {
         status: 200,
-        res: 'New Class reserved successful'
+        res: 'New Class reserved successful'  
       }
     else
       render json: {
@@ -33,6 +33,6 @@ class ReservationsController < ApplicationController
   private
 
   def new_reservation_params
-    params.require(:reservation).permit(:date, :group_id, :user_id)
+    params.require(:reservation).permit(:date, :group_id, :user_id, :city)
   end
 end
