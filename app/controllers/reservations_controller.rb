@@ -30,6 +30,12 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def destroy
+    reservation = Reservation.find(params[:id])
+    reservation.destroy
+    render json: 'The reservation has been cancelled!'
+  end
+
   private
 
   def new_reservation_params
