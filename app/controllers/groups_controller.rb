@@ -15,8 +15,6 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @current_user = User.find(1)
-
     @group = @current_user.groups.new(group_params)
 
     if @group.save
@@ -42,6 +40,6 @@ class GroupsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def group_params
-    params.permit(:name, :title, :description, :rating, :user_id, :image, :group)
+    params.require(:group).permit(:title, :description, :rating, :image)
   end
 end
