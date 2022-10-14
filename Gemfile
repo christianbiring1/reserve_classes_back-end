@@ -39,8 +39,10 @@ gem 'jwt'
 gem 'rswag'
 gem 'rswag-api'
 gem 'rswag-ui'
-gem "rake"
-
+gem 'bcrypt'
+gem 'rack-cors'
+gem 'rspec-rails'
+gem 'rswag-specs'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
@@ -56,8 +58,6 @@ gem 'ffi'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails', '~> 4.0.0.beta2'
-  gem 'rswag-specs'
 end
 
 group :development do
@@ -78,5 +78,3 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'bcrypt', '~> 3.1', '>= 3.1.18'
-gem 'rack-cors', require: 'rack/cors'
