@@ -39,6 +39,7 @@ gem 'jwt'
 gem 'rswag'
 gem 'rswag-api'
 gem 'rswag-ui'
+gem "rake"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
