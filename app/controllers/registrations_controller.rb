@@ -1,4 +1,5 @@
 class RegistrationsController < ApplicationController
+  skip_before_action :authenticate_request, only: %i[create]
   def create
     user = User.create!(user_register_params)
     if user
