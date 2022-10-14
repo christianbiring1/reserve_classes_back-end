@@ -3,7 +3,7 @@ require 'json'
 class GroupsController < ApplicationController
   before_action :set_group, only: %i[show destroy]
   before_action :group_params, only: %i[create]
-  skip_before_action :authenticate_request, only: [:index, :show]
+  skip_before_action :authenticate_request, only: %i[index show]
 
   # GET /class
   def index

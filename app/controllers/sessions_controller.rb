@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :authenticate_request, only: [:create, :logout]
+  skip_before_action :authenticate_request, only: %i[create logout]
 
   def create
     user = User
