@@ -55,8 +55,6 @@ paths:
               type: string
             user_id:
               type: integer
-            rooms:
-              type: multi
           required:
           - name
           - description
