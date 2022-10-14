@@ -37,7 +37,7 @@ Click [here](https://calm-mesa-77347.herokuapp.com/) to follow the API documenta
 - `bundle install`
 - `rails db:create`
 - `rails db:migrate`
-if you want to run it locally you will need to change the URL host in the and change it to localhost:3001 though. And all the API end point on the front-end app must match that as well.
+if you want to run it locally you will need to change the URL host in the `initializer/cors`and change it to localhost:3000 the domain of the font-end though. And all the API end point on the front-end app must match that as well.
 - `rails s -p 3001`
 - Open up the `localhost` in your browser
 
