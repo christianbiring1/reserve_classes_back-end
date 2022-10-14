@@ -2,7 +2,7 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  RAILS_ENV=production bundle exec rake assets:precompile
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -71,6 +71,7 @@ Rails.application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
+  
 
   # Don't log any deprecations.
   config.active_support.report_deprecations = false
