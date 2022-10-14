@@ -14,8 +14,8 @@ RSpec.describe Group, type: :model do
   end
 
   it 'Should not validate a group/clss creation without the image and/or title attributes' do
-    group = Group.create!(name: 'Basketball', description: 'This is the backetball class', rating: 10, title: 'Sport',
-                          image: Rack::Test::UploadedFile.new('spec/support/test_image.png', 'image/png'),
+    group = Group.create!(name: 'Basketball', description: 'This is the backetball class', rating: 10,
+                          title: 'Sport', image: Rack::Test::UploadedFile.new('spec/support/test_image.png', 'image/png'),
                           user_id: @user.id)
     group.title = nil
     group.image = nil
