@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     @user = User.new(name: 'Tom', email: 'test@gmail.com', password: '1234')
   end
 
-  it 'Should be valid' do
+  it 'Should create the user account' do
     @user.save
     expect(@user).to be_valid
   end

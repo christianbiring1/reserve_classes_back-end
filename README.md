@@ -3,6 +3,7 @@
 > The project we built for the Final Capstone Project is based on an app to book an appointment to attend a class. We had to follow the given design of the website, but we personalize the content, i.e., instead of booking an appointment to try a motorcycle, we built an app to book an appointment to attend a class.
 
 ### Entity Relationship Diagram (ERD)
+
 ![](/images/database.png)
 
 ## Built With
@@ -11,10 +12,12 @@
 - PostgreSQL
 
 ## Kanban board
+
 - Click [here](https://github.com/christianbiring1/reserve_classes_back-end/projects/1) to view the Kanban board
 - Click [here](https://github.com/christianbiring1/reserve_classes_back-end/issues/7) to view the Kanban board issue
 
 ## Front end
+
 > Click [here](https://github.com/christianbiring1/reserve_classes_front-end) to view the front end repository.
 
 ## API Documentation
@@ -40,6 +43,14 @@ Click [here](https://calm-mesa-77347.herokuapp.com/) to follow the API documenta
 if you want to run it locally you will need to change the URL host in the `initializer/cors`and change it to localhost:3000 the domain of the font-end though. And all the API end point on the front-end app must match that as well.
 - `rails s -p 3001`
 - Open up the `localhost` in your browser
+
+## Test
+
+- For testing all the app's models you can run the following command in the terminal
+`rspec`
+
+- If you would like to run each one of them separatly you can use
+`rspec spec/model/<file_name_spec.rb>`
 
 ## Author
 
