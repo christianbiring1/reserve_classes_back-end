@@ -17,11 +17,10 @@
 ## Front end
 > Click [here](https://github.com/christianbiring1/reserve_classes_front-end) to view the front end repository.
 
-## Live Demo
+## API Documentation
 
 Click [here](https://calm-mesa-77347.herokuapp.com/) to follow the API documentation
 
-Not yet available
 
 ### Prerequisites
 
