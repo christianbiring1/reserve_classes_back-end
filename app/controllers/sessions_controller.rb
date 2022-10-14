@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       render json: {
         status: 'Logged in successfully!',
         logged_in: true,
-        user: @current_user,
+        user: user,
         token:
       }
     else
