@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   def index
-    reservations = Reservation.all
+    reservations = @current_user.reservations
     if reservations
       render json: {
         status: 200,
@@ -28,6 +28,12 @@ class ReservationsController < ApplicationController
         res: 'Try again, some thing went wrong'
       }
     end
+  end
+
+  def destroy
+    reservation = Reservation.find(params[:id])
+    reservation.destroy
+    render json: 'The reservation has been cancelled!'
   end
 
   private
