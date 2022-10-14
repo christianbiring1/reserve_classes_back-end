@@ -1,17 +1,25 @@
-# Final group capstone - Book an Online class - Back-end
+# Reserve Classes - Back-end
 
-> Description
+> The project we built for the Final Capstone Project is based on an app to book an appointment to attend a class. We had to follow the given design of the website, but we personalize the content, i.e., instead of booking an appointment to try a motorcycle, we built an app to book an appointment to attend a class.
 
-The project we built for the Final Capstone Project is based on an app to book an appointment to attend a online class. We had to follow the given design of the website, but we personalize the content, i.e., instead of booking an appointment to try a motorcycle, we built an app to book an appointment to attend a remote class with a teacher. This was highly encouraged since having unique projects in our portfolio will help us stand out while looking for jobs.
+### Entity Relationship Diagram (ERD)
+![](/images/database.png)
 
 ## Built With
 
 - Ruby on Rails
 - PostgreSQL
 
+## Kanban board
+- Click [here](https://github.com/christianbiring1/reserve_classes_back-end/projects/1) to view the Kanban board
+- Click [here](https://github.com/christianbiring1/reserve_classes_back-end/issues/7) to view the Kanban board issue
+
+## Front end
+> Click [here](https://github.com/christianbiring1/reserve_classes_front-end) to view the front end repository.
+
 ## Live Demo
 
-You can check the live demo :
+Click [here](#) to follow the API documentation
 
 Not yet available
 
@@ -44,21 +52,21 @@ if you want to run it locally you will need to change the URL host in the and ch
 
 👤 **Jake Felice**
 
-- GitHub: [Jake Felice](https://github.com/)
-- Twitter: [](https://twitter.com/)
-- LinkedIn: [](https://linkedin.com/in//)
+- GitHub: [@jasonfelice](https://github.com/jasonfelice)
+- Twitter: [@jasonfelice0](https://twitter.com/jasonfelice0)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jason-felice-11a5a622b/)
 
 👤 **Bazimungu Pascal**
 
-- Github: [](https://github.com/)
-- Linkedin: [](https://www.linkedin.com/in//)
-- Twitter: [](https://twitter.com/)
+- GitHub: [@githubhandle](https://github.com/bizip)
+- Twitter: [@twitterhandle](https://twitter.com/BizimunguPasca9)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/bizimungu)
 
 👤 **Yussuf Nviiri**
 
-- Github: [](https://github.com/)
-- Linkedin: [](https://www.linkedin.com/in//)
-- Twitter: [](https://twitter.com/)
+- GitHub: [@yusufnviiri](https://github.com/yusufnviiri)
+- Twitter: [@YNviiri](https://twitter.com/YNviiri)
+- LinkedIn: [yusufnviiri]( https://www.linkedin.com/in/yusuf-nviiri-8b4146206/)
 
 ## 🤝 Contributing
 
